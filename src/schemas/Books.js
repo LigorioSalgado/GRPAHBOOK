@@ -15,12 +15,15 @@ const BookSchema = new Schema({
     'isbn':{
         type:String
     },
+    'num_pages' : {
+        type:Number
+    },
 
     'cover':{
         type:String
     },
     
-    'Autor':{ 
+    'autor':{ 
         type: Schema.Types.ObjectId, 
         ref: 'author' }
     
