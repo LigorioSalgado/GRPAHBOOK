@@ -1,8 +1,7 @@
-import * as QueryAuthor from './Authors';
-import  * as QueryBook from './Books';
-
+import QueryAuthors from './authors';
+import QueryBooks from './books';
 
 export default {
-    ...QueryAuthor,
-    ...QueryBook
+    ...QueryAuthors,
+    ...QueryBooks
 }

@@ -9,9 +9,11 @@ import {
 
 import Book from '../../schemas/Books';
 import Author  from '../../schemas/Authors';
-import AuthorType from './Authors'
+import {AuthorType} from './Authors'
 
-const BookType = new GraphQLInputObjectType({
+console.log(AuthorType)
+
+const BookType = new GraphQLObjectType({
     name:"Books",
     description:"Books in the database",
     fields: () => ({
@@ -32,7 +34,7 @@ const BookType = new GraphQLInputObjectType({
         cover:{
             type:GraphQLString
         },
-        autor:{
+        author:{
             type:AuthorType,
             resolve(book){
                 const {author} = book
@@ -45,7 +47,7 @@ const BookType = new GraphQLInputObjectType({
 
 
 const BookInputType = new GraphQLInputObjectType({
-    name:"Add Books",
+    name:"AddBooks",
     description:"Add new books",
     fields: () => ({
 

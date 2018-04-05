@@ -4,17 +4,15 @@ import {
     GraphQLNonNull,
     GraphQLString,
     GraphQLInt,
+    GraphQLID,
     GraphQLBoolean,
-    GraphQLList,
-    GraphQLID
+    GraphQLList
 } from 'graphql'
 
 import Autor from '../../schemas/Authors';
 import Book from '../../schemas/Books';
 
-
-
-const AuthorType = new GraphQLObjectType({
+export const AuthorType = new GraphQLObjectType({
     name:"Authors",
     description:"Authors in the DB",
     fields : () => ({
@@ -39,20 +37,12 @@ const AuthorType = new GraphQLObjectType({
         },
         photo :{
             type:GraphQLString
-        },
-        books: {
-            type: new GraphQLList(),
-            resolve(author){
-                const {_id} = author
-                return Book.find({author:_id}).exec()
-            }
-
         }
     })
 })
 
-const AuthorInputType =  new GraphQLInputObjectType({
-    name:"Author add",
+export const AuthorInputType =  new GraphQLInputObjectType({
+    name:"Authoradd",
     description:"Adds a new Author",
     fields : () => ({
         
@@ -82,7 +72,3 @@ const AuthorInputType =  new GraphQLInputObjectType({
 
 })
 
-export  {
-    AuthorType,
-    AuthorInputType
-}

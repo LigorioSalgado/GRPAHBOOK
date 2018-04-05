@@ -23,7 +23,7 @@ const BookSchema = new Schema({
         type:String
     },
     
-    'autor':{ 
+    'author':{ 
         type: Schema.Types.ObjectId, 
         ref: 'author' }
     
