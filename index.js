@@ -1,6 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
-import SeedAutor from './seeders/autors';
+import graphQLHTTP from 'express-graphql';
+
+import schema from './graphql';
 
 const app = express();
 
@@ -13,6 +15,12 @@ db.on('error',() => console.log("Failed to conect to database"))
 app.get('/',(req,res) => {
     res.send("Hello World from Graph API");
 });
+
+app.use('/graphql', graphQLHTTP(() => ({
+    schema,
+    graphiql:true,
+    pretty:true
+})))
 
 app.listen(3000,() => {
     console.log("The magic starts on 3000 port")
