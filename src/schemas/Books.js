@@ -20,7 +20,7 @@ const BookSchema = new Schema({
         type:String
     },
     
-    'Autor':{ 
+    'author':{ 
         type: Schema.Types.ObjectId, 
         ref: 'author' }
     
@@ -28,4 +28,4 @@ const BookSchema = new Schema({
 
 },{'collection':'book',timestamps:true})
 
-export default mongoose.model('book',AuthorSchema)
+export default mongoose.model('book',BookSchema)
