@@ -37,7 +37,7 @@ const AuthorType = new GraphQLObjectType({
         biography:{
             type:GraphQLString
         },
-        image :{
+        photo :{
             type:GraphQLString
         },
         books: {

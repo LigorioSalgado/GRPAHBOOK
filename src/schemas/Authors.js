@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const Schema = mongoose.Schema()
+const Schema = mongoose.Schema
 
 
 
@@ -24,9 +24,9 @@ const AuthorSchema = new Schema({
         type:Boolean
     },
     'biography':{
-        type:Text
+        type:String
     },
-    'image':{
+    'photo':{
         type:String
     }
 
