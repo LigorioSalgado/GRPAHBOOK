@@ -4,7 +4,7 @@ import {
 } from 'graphql';
 
 import {BookType, BookInputType} from '../types/Books';
-import Book from '../../schemas/Book'
+import Book from '../../schemas/Books'
 
 const addBook =  {
     type: BookType,

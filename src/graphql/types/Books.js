@@ -70,7 +70,7 @@ const BookInputType = new GraphQLInputObjectType({
 })
 
 
-export default {
+export  {
     BookType,
     BookInputType
 

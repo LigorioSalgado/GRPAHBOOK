@@ -82,7 +82,7 @@ const AuthorInputType =  new GraphQLInputObjectType({
 
 })
 
-export default {
+export  {
     AuthorType,
     AuthorInputType
 }

@@ -1,10 +1,8 @@
-import {AuthorAll,AuthorSingle} from './Authors';
-import  {BookAll,BookSingle} from './Books';
+import * as QueryAuthor from './Authors';
+import  * as QueryBook from './Books';
 
 
 export default {
-    AuthorAll,
-    AuthorSingle,
-    BookAll,
-    BookSingle
+    ...QueryAuthor,
+    ...QueryBook
 }
